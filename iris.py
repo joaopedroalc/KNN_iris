@@ -1,3 +1,8 @@
+# UNIVERSIDADE FEDERAL DO MARANHÃO
+# DISCENTE: JOÃO PEDRO DE ALCÂNTARA LIMA
+# DISCIPLINA: INTELIGÊNCIA ARTIFICIAL (EECP0008)
+# MATRÍCULA : 2019004788
+
 from sklearn import neighbors, datasets, preprocessing
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
@@ -8,11 +13,12 @@ import pandas as pd
 
 
 iris = datasets.load_iris() 
-#just printing the iris dataset
+#PRINT DO DATASET 
 data1 = pd.DataFrame(data= np.c_[iris['data'], iris['target']],
                 columns= iris['feature_names'] + ['target'])
 print(data1)
 
+#DIVISÃO DOS DADOS EM TREINAMENTO E TESTE
 X, y = iris.data[:, :], iris.target
 Xtrain, Xtest, y_train, y_test = train_test_split(X, y, stratify = y, random_state = 0, train_size = 0.7)
 
